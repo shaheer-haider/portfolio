@@ -1,7 +1,7 @@
 {
-  "name": "Junaid Ahmed",
-  "logo_name": "junaid-ahmed",
-  "role": "Front-end developer",
+  "name": "Shaheer Haider",
+  "logo_name": "shaheer-haider",
+  "role": "DevOps Engineer",
   "about": {
     "sections": {
       "professional-info": {
@@ -52,45 +52,20 @@
     "direct": {
       "title": "contacts",
       "sources": {
-        "email": "imaadahmed300@gmail.com",
-        "phone": "+923172999788"
+        "email": "coder.shaheer@gmail.com",
+        "phone": "+923462615589"
       }
     },
     "social": {
       "github": {
-        "title": "Github profile",
+        "title": "Github",
         "url": "https://github.com/",
-        "user": "junaidsahar"
-      },
-      "facebook": {
-        "title": "Facebook profile",
-        "url": "https://www.facebook.com/",
-        "user": "dangeriouxcrimnal.dkx"
+        "user": "shaheer-haider"
       },
       "linkedin": {
-        "title": "LinkedIn account",
+        "title": "LinkedIn",
         "url": "https://www.linkedin.com/in/",
-        "user": "junaid-ahmed-sahar-8903b3224"
-      }
-    },
-    "find_me_also_in": {
-      "title": "find-me-also-in",
-      "sources": {
-        "dribble": {
-          "title": "Dribble profile",
-          "url": "https://dribbble.com/",
-          "user": "Junaid-JK"
-        },
-        "behance": {
-          "title": "Behance profile",
-          "url": "https://www.behance.net/",
-          "user": "imaadahmed4ce4"
-        },
-        "instagram": {
-          "title": "Instagram account",
-          "url": "https://www.instagram.com/",
-          "user": "_junaid_ahmed_sahar/"
-        }
+        "user": "shaheer-haider"
       }
     }
   },

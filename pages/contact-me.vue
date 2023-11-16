@@ -32,7 +32,7 @@
                     </h3>
                 </div>
                 <div id="links">
-                    <div v-for="(source, key) in contact.find_me_also_in.sources" :key="key" class="link">
+                    <div v-for="(source, key) in contact.social" :key="key" class="link">
                         <img src="/icons/link.svg">
                         <a :href="source.url + source.user" class="font-fira_retina text-menu-text hover:text-white" target="_blank">{{ source.title }}</a>
                     </div>
@@ -40,7 +40,7 @@
             </div>
 
         </div>
-            
+
         <div class="flex flex-col w-full">
 
         <!-- windows tab -->
@@ -55,15 +55,15 @@
 
             <!-- main -->
             <div class="flex lg:grid lg:grid-cols-2 h-full w-full">
-        
+
                 <div id="left" class="h-full w-full flex flex-col border-right items-center">
-                    
+
                     <ContactForm :name="name" :email="email" :message="message" />
 
                 </div>
 
                 <div id="right" class="h-full w-full hidden lg:flex">
-                    
+
                     <div class="form-content">
                         <FormContentCode :name="name" :email="email" :message="message" />
                     </div>
@@ -71,7 +71,7 @@
                     <div id="scroll-bar" class="h-full border-left flex justify-center py-1">
                         <div id="scroll"></div>
                     </div>
-                
+
                 </div>
             </div>
 
@@ -138,7 +138,7 @@ export default {
          */
         const links = document.getElementsByClassName('submenu');
         for (let i = 0; i < links.length; i++) {
-            if(window.innerWidth > 1024){ 
+            if(window.innerWidth > 1024){
                 links[i].querySelector("#links").style.display = "block";
                 links[i].querySelector(".arrow").style.transform = "rotate(90deg)";
             } else {
@@ -193,7 +193,7 @@ export default {
     font-size: 15px;
 }
 @media (min-width: 1024px) {
-    
+
     .submenu .title {
         display: flex;
         align-items: center;
