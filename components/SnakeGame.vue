@@ -27,7 +27,33 @@
     />
 
     <!-- Game Screen -->
-    <div id="game-screen" ref="gameScreen"></div>
+    <div class="relative">
+      <div id="game-screen" ref="gameScreen"></div>
+      <img
+        v-if="!isBackgroundAudioMuted"
+        @click="
+          () => {
+            isBackgroundAudioMuted = true;
+            backgroundAudio.muted = true;
+          }
+        "
+        src="@/assets/icons/play-music.svg"
+        alt=""
+        class="absolute top-2 right-2 opacity-70 cursor-pointer"
+      />
+      <img
+        @click="
+          () => {
+            isBackgroundAudioMuted = false;
+            backgroundAudio.muted = false;
+          }
+        "
+        v-else
+        src="@/assets/icons/pause-music.svg"
+        alt=""
+        class="absolute top-2 right-2 opacity-70 cursor-pointer"
+      />
+    </div>
 
     <button id="start-button" class="font-fira_retina" @click="startGame">
       start-game
@@ -60,16 +86,22 @@
       </button>
     </div>
     <SnakeGameMenu
-      :snakeColor="snakeColor" :foodColor="foodColor" @move="move"
-      @updateSnakeColor="(e)=>{
-        snakeColor=e;
-        render();
-      }"
-      @updateFoodColor="(e)=>{
-        foodColor=e
-        render();
-      }"
-     />
+      :snakeColor="snakeColor"
+      :foodColor="foodColor"
+      @move="move"
+      @updateSnakeColor="
+        (e) => {
+          snakeColor = e;
+          render();
+        }
+      "
+      @updateFoodColor="
+        (e) => {
+          foodColor = e;
+          render();
+        }
+      "
+    />
   </div>
 </template>
 
@@ -79,8 +111,10 @@ import SnakeGameMenu from "./SnakeGameMenu.vue";
 export default {
   data() {
     return {
-      foodColor: "#8254FF",
-      snakeColor: "#8254FF",
+      foodColor: "#E0FFF8",
+      snakeColor: "#E0FFF8",
+      backgroundAudio: null,
+      isBackgroundAudioMuted: false,
       score: 0,
       gameInterval: null,
       gameStarted: false,
@@ -111,6 +145,21 @@ export default {
   },
   methods: {
     startGame() {
+      if (this.backgroundAudio.paused) {
+        if (this.backgroundAudio.src != "/music/game-background.mp3") {
+          this.backgroundAudio.src = "/music/game-background.mp3";
+        }
+        this.backgroundAudio.play();
+      }
+      // else {
+      //   if (this.backgroundAudio.src != "/music/game-background.mp3") {
+      //     this.backgroundAudio.pause();
+      //     this.backgroundAudio.src = "/music/game-background.mp3";
+      //     this.backgroundAudio.load();
+      //   }
+      // }
+      this.backgroundAudio.currentTime = 0;
+      this.backgroundAudio.play();
       // hide start button
       document.getElementById("start-button").style.display = "none";
       // start game
@@ -118,6 +167,11 @@ export default {
       this.gameInterval = setInterval(this.moveSnake, 70);
     },
     startAgain() {
+      this.backgroundAudio.pause();
+      this.backgroundAudio.src = "/music/game-background.mp3";
+      this.backgroundAudio.load();
+      this.backgroundAudio.play();
+
       // Mostrar botón de start-game
       document.getElementById("start-button").style.display = "block";
       // Ocultar game over
@@ -218,6 +272,10 @@ export default {
         document.getElementById("game-over").style.display = "block";
         this.gameStarted = false;
         this.gameOver = true;
+        this.backgroundAudio.pause();
+        this.backgroundAudio.src = "/music/game-over.mp3";
+        this.backgroundAudio.load();
+        this.backgroundAudio.play();
       }
       this.render();
     },
@@ -312,6 +370,8 @@ export default {
     },
   },
   mounted() {
+    this.backgroundAudio = new Audio("/music/game-background.mp3");
+    this.backgroundAudio.load();
     document.addEventListener("keydown", (event) => {
       if (this.gameStarted) {
         switch (event.keyCode) {
@@ -370,7 +430,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, #C36FFB21, #7000DA);
+  background: linear-gradient(to bottom, #c36ffb21, #7000da);
   color: white;
   border-radius: 10px;
   padding: 30px;
@@ -392,7 +452,7 @@ export default {
   padding-block: 8px;
   border-radius: 10px;
   border: 1px solid white;
-  background-color: #8254FF;
+  background-color: #8254ff;
   color: black;
   cursor: pointer;
   position: absolute;
@@ -403,7 +463,7 @@ export default {
 }
 
 #start-button:hover {
-  background-color: #6832FF;
+  background-color: #6832ff;
 }
 
 #console-menu {
@@ -422,7 +482,7 @@ export default {
 
 #console-button:hover {
   background-color: #010c15d8;
-  box-shadow: #8400FF 0 0 10px;
+  box-shadow: #8400ff 0 0 10px;
 }
 
 #instructions {
@@ -468,7 +528,7 @@ export default {
   border-radius: 0.5rem; /* 8px */
 }
 #skip-btn:hover {
-  background-color: #6102B9;
+  background-color: #6102b9;
 }
 
 @media (min-width: 1024px) and (max-width: 1536px) {

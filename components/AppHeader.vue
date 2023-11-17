@@ -1,5 +1,5 @@
 <template>
-    <header id="navbar" class="w-full hidden lg:flex flex-col">
+    <header id="navbar" class="w-full hidden lg:flex flex-col select-none">
       <nav class="w-full flex justify-between border-bot">
 
           <div class="flex">

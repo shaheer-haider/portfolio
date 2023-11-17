@@ -4,16 +4,16 @@
         <!-- head info -->
         <div class="flex justify-between my-2">
 
-            <div class="flex">
+            <div class="flex items-center">
                 <!-- avatar -->
-                <img :src="gist.owner.avatar_url" alt="" class="w-8 h-8 rounded-full mr-2">
+                <img :src="gist.owner.avatar_url" alt="" class="w-6 h-6 rounded-full mr-2">
 
                 <!-- username & gist date info -->
                 <div class="flex flex-col">
                     <a id="username" :href="'https://github.com/' + gist.owner.login" target="_blank" class="font-fira_bold text-purple-text text-xs pb-1 hover:cursor-pointer">
                         @{{ gist.owner.login }}
                     </a>
-                    <p class="font-fira_retina text-xs text-menu-text">Created {{ monthsAgo }} months ago</p>
+                    <!-- <p class="font-fira_retina text-xs text-menu-text">Created {{ monthsAgo }} months ago</p> -->
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
 
 .snippet-container code {
     white-space: pre-wrap;
-    max-height: 220px;
+    /* max-height: 220px; */
     width: max-content;
     overflow: hidden;
 

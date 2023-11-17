@@ -12,7 +12,7 @@ module.exports = {
                 'neon-blue-l': '#05131e',
                 'neon-blue-xl': '#020204',
                 'dark-background': '#010C15',
-                'menu-text': '#607B96',
+                'menu-text': '#71869C',
                 'blue-background': '#011627',
                 'hello-name': '#E5E9F0',
                 'purple-text': '#4D5BCE',

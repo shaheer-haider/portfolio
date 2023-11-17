@@ -10,18 +10,18 @@
         "info": {
           "experience": {
             "title": "experience",
-            "description": "<br> I have 3+ years of experience as a front-end developer. Currently i am working as a VueJs developer at Al-Nafi E-learning platform.",
-            "files": [
-              "DevOps Engineer",
-              "Full Stack Engineer"
-            ]
+            "description": "<br> I have 3+ years of experience as a front-end developer. Currently i am working as a VueJs developer at Al-Nafi E-learning platform."
           },
-          "hard-skills": {
-            "title": "hard-skills",
-            "description": "<br>As a front-end developer, I have expertise in developing web applications using Html, Css, Javascript, Vue, react, Nuxt, next, and Tailwindcss"
+          "frontend-skills": {
+            "title": "frontend-skills",
+            "description": "<br>I mostly use Nuxt3 and Tailwind to develop web application but I'm also familiar with React and other new frameworks.<br><br>I have deep understanding of <strong>DOM rendering</strong> and all types of <strong>rendering and routing strategies</strong>.<br>"
           },
-          "soft-skills": {
-            "title": "soft-skills",
+          "backend-skills": {
+            "title": "backend-skills",
+            "description": "<br>I have basic knowledge of graphics design tools such as Adobe Photoshop and Adobe Illustrator, and UI UX tools such as Figma and Adobe XD"
+          },
+          "devops-cloud-skills": {
+            "title": "devops-cloud-skills",
             "description": "<br>I have basic knowledge of graphics design tools such as Adobe Photoshop and Adobe Illustrator, and UI UX tools such as Figma and Adobe XD"
           }
         }
@@ -32,11 +32,11 @@
         "info": {
           "bio": {
             "title": "bio",
-            "description": "<br> About me <br> As a Frontend Engineer, I am a skilled and innovative developer specializing in creating dynamic and interactive user interfaces for web applications. With a strong grasp of HTML, CSS, and JavaScript, I have a passion for crafting seamless and visually appealing experiences that engage users and drive business goals. My ability to collaborate effectively with cross-functional teams and translate design concepts into functional code has been instrumental in delivering successful projects. <br><br> Overall, my dedication to the art of frontend development, problem-solving abilities, and commitment to excellence enable me to contribute significantly to the success of projects, while continuously honing my skills to stay at the forefront of the ever-evolving web landscape."
+            "description": "<br>I develop and modernize the Cloud and Application Architecture and Process <br><br>I'm a DevOps Professional 🏆 with over 2 years of experience in 🌐 Full Stack Development, AWS, Azure, automation, and System Design for a variety of development projects.<br><br>Here's a glimpse into what I do: <br>- 💪 Develop robust and scalable applications. <br>- ☁️ Create secure and scalable Cloud Infrastructure. <br>- ✍️ Design Application Architecture and Cloud Infrastructure. <br>- ⛅ Stay committed to learning new things at a high speed with consistency.<br><br><br>&nbsp;"
           },
           "interests": {
             "title": "interests",
-            "description": "<br>I am constantly learning  the latest tools and frameworks to stay at the forefront of technology."
+            "description": "<br>I am constantly learning the latest tools and frameworks to stay at the forefront of technology. My favorite topics are:<br>- DevSecOps with AWS<br>- Event Driven Microservices<br>- Software as a Service<br>"
           }
         }
       },
@@ -74,8 +74,8 @@
     }
   },
   "gists": {
-    "1": "83861a67e377633ee8368df01ee3a355",
-    "2": "694c1f32332788a2ac7f37b09e5aa40e"
+    "1": "c632a676745576d014770b20f8310fe7",
+    "2": "d6110939fe79a8ec9d607e58d943a969"
   },
   "projects": {
     "1": {

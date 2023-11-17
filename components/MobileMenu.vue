@@ -1,5 +1,5 @@
 <template>
-  <div id="mobile-menu" class="w-full z-10 lg:hidden">
+  <div id="mobile-menu" class="w-full z-10 lg:hidden select-none">
 
     <!-- header -->
     <div id="mobile-header" class="w-full h-16 flex justify-between items-center">

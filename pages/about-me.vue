@@ -4,7 +4,7 @@
       <h2>_about-me</h2>
     </div>
 
-    <div id="page-menu" class="w-full flex">
+    <div id="page-menu" class="w-full flex select-none">
 
       <!-- DESKTOP section icons -->
       <div id="sections">
@@ -26,8 +26,8 @@
         <div>
           <div v-for="(folder, key, index) in config.dev.about.sections[currentSection].info" :key="key" class="grid grid-cols-2 items-center my-2 font-fira_regular text-menu-text" @click="focusCurrentFolder(folder)">
             <div class="flex col-span-2 hover:text-white hover:cursor-pointer">
-              <img id="diple" src="/icons/diple.svg" alt="" :class="{ open: isOpen(folder.title)}">
-              <img :src="'/icons/folder' + (index+1) + '.svg'" alt="" class="mr-3">
+              <!-- <img id="diple" src="/icons/diple.svg" alt="" :class="{ open: isOpen(folder.title)}"> -->
+              <img :src="'/icons/folder' + (index+1) + '.svg'" alt="" class="mx-3">
               <p :id="folder.title" v-html="key" :class="{ active: isActive(folder.title)}"></p>
             </div>
             <div v-if="folder.files !== undefined" class="col-span-2">
@@ -109,7 +109,7 @@
       <div id="left" class="w-full flex flex-col border-right">
 
         <!-- windows tab desktop -->
-        <div class="tab-height w-full hidden lg:flex border-bot items-center">
+        <div class="tab-height w-full hidden lg:flex border-bot items-center select-none">
           <div class="flex items-center border-right h-full">
             <p v-html="config.dev.about.sections[currentSection].title" class="font-fira_regular text-menu-text text-sm px-3"></p>
             <img src="/icons/close.svg" alt="" class="mx-3">
