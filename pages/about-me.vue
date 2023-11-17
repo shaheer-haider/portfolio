@@ -1,6 +1,5 @@
 <template>
   <main v-if="!loading" id="about-me" class="page">
-
     <div id="mobile-page-title">
       <h2>_about-me</h2>
     </div>
@@ -34,7 +33,7 @@
             <div v-if="folder.files !== undefined" class="col-span-2">
               <div v-for="(file, key) in folder.files" :key="key" class="hover:text-white hover:cursor-pointer flex my-2">
                 <img src="/icons/markdown.svg" alt="" class="ml-8 mr-3"/>
-                <p >{{ key }}</p>
+                <p >{{ file }}</p>
               </div>
             </div>
           </div>
@@ -45,6 +44,7 @@
           <img id="section-arrow-menu" src="/icons/arrow.svg" alt="" class="section-arrow mx-3 open">
           <p v-html="config.dev.contacts.direct.title" class="font-fira_regular text-white text-sm"></p>
         </div>
+
         <div id="contact-sources" class="hidden lg:flex lg:flex-col my-2">
           <div v-for="(source, key) in config.dev.contacts.direct.sources" :key="key" class="flex items-center mb-2 overflow-x-hidden mr-1">
             <img :src="'/icons/' + key + '.svg'" alt="" class="mx-4">
@@ -182,7 +182,7 @@
   width: 5rem; /* 80px */
   height: 100%;
   display: none;
-  border-right: 1px solid #1E2D3D;
+  border-right: 1px solid #321e44;
 }
 
 /* LG */

@@ -5,7 +5,7 @@
         <p>// use your keyboard</p>
         <p>// arrows to play</p>
 
-        <div id="buttons" class="w-full flex flex-col items-center gap-1 pt-5">
+        <div id="buttons" class="w-full flex flex-col items-center gap-1 pt-2">
           <button id="console-button" class="button-up" @click="emit('move', 'up')">
             <img src="/icons/console/arrow-button.svg" alt="" />
           </button>

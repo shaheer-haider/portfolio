@@ -36,7 +36,7 @@
     <!-- Game Over -->
     <div id="game-over" class="hidden">
       <span
-        class="font-fira_retina text-greenfy bg-bluefy-dark h-12 flex items-center justify-center"
+        class="font-fira_retina text-blue-700 bg-bluefy-dark h-12 flex items-center justify-center"
         >GAME OVER!</span
       >
       <button
@@ -49,7 +49,7 @@
 
     <div id="congrats" class="hidden">
       <span
-        class="font-fira_retina text-greenfy bg-bluefy-dark h-12 flex items-center justify-center"
+        class="font-fira_retina text-blue-600 bg-bluefy-dark h-12 flex items-center justify-center"
         >WELL DONE!</span
       >
       <button
@@ -61,8 +61,14 @@
     </div>
     <SnakeGameMenu
       :snakeColor="snakeColor" :foodColor="foodColor" @move="move"
-      @updateSnakeColor="(e)=>snakeColor=e"
-      @updateFoodColor="(e)=>foodColor=e"
+      @updateSnakeColor="(e)=>{
+        snakeColor=e;
+        render();
+      }"
+      @updateFoodColor="(e)=>{
+        foodColor=e
+        render();
+      }"
      />
   </div>
 </template>
@@ -73,8 +79,8 @@ import SnakeGameMenu from "./SnakeGameMenu.vue";
 export default {
   data() {
     return {
-      foodColor: "#43D9AD",
-      snakeColor: "#43D9AD",
+      foodColor: "#8254FF",
+      snakeColor: "#8254FF",
       score: 0,
       gameInterval: null,
       gameStarted: false,
@@ -109,7 +115,7 @@ export default {
       document.getElementById("start-button").style.display = "none";
       // start game
       this.gameStarted = true;
-      this.gameInterval = setInterval(this.moveSnake, 80);
+      this.gameInterval = setInterval(this.moveSnake, 70);
     },
     startAgain() {
       // Mostrar botón de start-game
@@ -364,7 +370,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, rgba(251, 111, 146, 0.13), rgba(255, 223, 0, 1));
+  background: linear-gradient(to bottom, #C36FFB21, #7000DA);
+  color: white;
   border-radius: 10px;
   padding: 30px;
   position: relative;
@@ -385,7 +392,7 @@ export default {
   padding-block: 8px;
   border-radius: 10px;
   border: 1px solid white;
-  background-color: #ff7b00;
+  background-color: #8254FF;
   color: black;
   cursor: pointer;
   position: absolute;
@@ -396,7 +403,7 @@ export default {
 }
 
 #start-button:hover {
-  background-color: rgb(255, 178, 119);
+  background-color: #6832FF;
 }
 
 #console-menu {
@@ -415,7 +422,7 @@ export default {
 
 #console-button:hover {
   background-color: #010c15d8;
-  box-shadow: #ff7b00 0 0 10px;
+  box-shadow: #8400FF 0 0 10px;
 }
 
 #instructions {
@@ -454,11 +461,14 @@ export default {
 
 #skip-btn {
   font-size: 14px;
-  color: #000;
+  color: white;
   padding-inline: 16px;
   padding-block: 8px;
   border: 2px solid #000;
   border-radius: 0.5rem; /* 8px */
+}
+#skip-btn:hover {
+  background-color: #6102B9;
 }
 
 @media (min-width: 1024px) and (max-width: 1536px) {

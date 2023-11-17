@@ -10,7 +10,11 @@
         "info": {
           "experience": {
             "title": "experience",
-            "description": "<br> I have 3+ years of experience as a front-end developer. Currently i am working as a VueJs developer at Al-Nafi E-learning platform."
+            "description": "<br> I have 3+ years of experience as a front-end developer. Currently i am working as a VueJs developer at Al-Nafi E-learning platform.",
+            "files": [
+              "DevOps Engineer",
+              "Full Stack Engineer"
+            ]
           },
           "hard-skills": {
             "title": "hard-skills",

@@ -41,9 +41,9 @@ export default {
             const name = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
             const message = document.querySelector('textarea[name="message"]').value;
-            
+
             // Here the code to send the email
-            
+
         });
     }
 }
@@ -56,13 +56,13 @@ form {
 }
 input {
     background-color: #011221;
-    border: 2px solid #1E2D3D;
+    border: 2px solid #321e44;
     border-radius: 7px;
-    
+
 }
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -77,7 +77,7 @@ select:-webkit-autofill:focus {
 
 #message-input {
     background-color: #011221;
-    border: 2px solid #1E2D3D;
+    border: 2px solid #321e44;
     border-radius: 7px;
     resize: none;
     height: 150px;
@@ -86,7 +86,7 @@ select:-webkit-autofill:focus {
 
 #submit-button {
     @apply font-fira_retina text-white text-sm;
-    background-color: #1E2D3D;
+    background-color: #321e44;
     border-radius: 7px;
     margin-top: 20px;
     cursor: pointer;

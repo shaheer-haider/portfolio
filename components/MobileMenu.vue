@@ -15,11 +15,11 @@
         <NuxtLink id="nav-link-mobile" to="/" :class="{ active: isActive('/') }" @click="toggleMobileMenu()">
           _hello
         </NuxtLink>
-  
+
         <NuxtLink id="nav-link-mobile" to="/about-me" :class="{ active: isActive('/about-me') }" @click="toggleMobileMenu()">
           _about-me
         </NuxtLink>
-  
+
         <NuxtLink id="nav-link-mobile" to="/projects" :class="{ active: isActive('/projects') }" @click="toggleMobileMenu()">
           _projects
         </NuxtLink>
@@ -83,11 +83,11 @@ export default {
 <style>
 
 #mobile-header {
-  border-bottom: 1px solid #1E2D3D;
+  border-bottom: 1px solid #321e44;
 }
 
 #nav-link-mobile {
-  border-bottom: 1px solid #1E2D3D;
+  border-bottom: 1px solid #321e44;
   @apply text-menu-text font-fira_retina px-6 py-4 flex items-center;
 }
 
