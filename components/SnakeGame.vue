@@ -56,7 +56,7 @@
     </div>
 
     <button id="start-button" class="font-fira_retina" @click="startGame">
-      start-game
+      press-space
     </button>
 
     <!-- Game Over -->
@@ -149,18 +149,9 @@ export default {
         if (this.backgroundAudio.src != "/music/game-background.mp3") {
           this.backgroundAudio.src = "/music/game-background.mp3";
         }
+        this.backgroundAudio.currentTime = 0;
         this.backgroundAudio.play();
       }
-      // else {
-      //   if (this.backgroundAudio.src != "/music/game-background.mp3") {
-      //     this.backgroundAudio.pause();
-      //     this.backgroundAudio.src = "/music/game-background.mp3";
-      //     this.backgroundAudio.load();
-      //   }
-      // }
-      this.backgroundAudio.currentTime = 0;
-      this.backgroundAudio.play();
-      // hide start button
       document.getElementById("start-button").style.display = "none";
       // start game
       this.gameStarted = true;
@@ -370,8 +361,9 @@ export default {
     },
   },
   mounted() {
-    this.backgroundAudio = new Audio("/music/game-background.mp3");
-    this.backgroundAudio.load();
+    if (!this.backgroundAudio) {
+      this.backgroundAudio = new Audio("/music/game-background.mp3");
+    }
     document.addEventListener("keydown", (event) => {
       if (this.gameStarted) {
         switch (event.keyCode) {
@@ -417,6 +409,11 @@ export default {
       this.render();
     };
     this.render();
+  },
+  unmounted() {
+    if (this.backgroundAudio) {
+      this.backgroundAudio.pause();
+    }
   },
   components: { SnakeGameMenu },
 };

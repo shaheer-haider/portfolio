@@ -8,21 +8,17 @@
         "title": "professional-info",
         "icon": "icons/info-professional.svg",
         "info": {
-          "experience": {
-            "title": "experience",
-            "description": "<br> I have 3+ years of experience as a front-end developer. Currently i am working as a VueJs developer at Al-Nafi E-learning platform."
-          },
           "frontend-skills": {
             "title": "frontend-skills",
-            "description": "<br>I mostly use Nuxt3 and Tailwind to develop web application but I'm also familiar with React and other new frameworks.<br><br>I have deep understanding of <strong>DOM rendering</strong> and all types of <strong>rendering and routing strategies</strong>.<br>"
+            "description": "<br>Nuxt 2 & 3<br>Vue<br>Tailwind CSS<br>Astro<br>React<br>Hybrid Rendering<br>Server & Client Side Rendering<br>Advanced Rendering Strategies<br>"
           },
           "backend-skills": {
             "title": "backend-skills",
-            "description": "<br>I have basic knowledge of graphics design tools such as Adobe Photoshop and Adobe Illustrator, and UI UX tools such as Figma and Adobe XD"
+            "description": "<br>Django<br>Django REST Framework<br>Flask<br>Fast API<br>Node<br>Express<br>AWS SDK<br>Advanced Encryption techniques<br>Multi Tenant APIs<br>Multi threaded systems<br>Microservices Architecture<br>Event Driven Microservices<br>"
           },
           "devops-cloud-skills": {
             "title": "devops-cloud-skills",
-            "description": "<br>I have basic knowledge of graphics design tools such as Adobe Photoshop and Adobe Illustrator, and UI UX tools such as Figma and Adobe XD"
+            "description": "<br>Worked on AWS, Azure, and GCP<br>Infrastructure as a Code<br>CI/ CD Pipelines<br>Auto scaling and Load Balancing<br>Serverless Computing<br>Containerized Computing<br>Network & Object Storage<br>Databases Scaling<br>Monitoring and Logging<br>Events and Queues<br>Backups and Alerts<br>Cost Optimization<br>Advanced VPC Networking<br>Advanced Identity Management<br>Encryption and Security<br>"
           }
         }
       },
@@ -46,7 +42,7 @@
         "info": {
           "favorite-games": {
             "title": "games",
-            "description": "<br>I am a passionate gamer"
+            "description": "<br>The best of all \"Tekken series\""
           }
         }
       }
